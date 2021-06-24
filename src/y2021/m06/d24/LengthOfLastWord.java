@@ -33,6 +33,10 @@ public class LengthOfLastWord {
     }
 
     /**
+     * 从后往前遍历
+     * 时间复杂度：O(n)，n为结尾空格和结尾单词总体长度
+     * 空间复杂度：O(1)。我们只需要常数空间存放若干变量。
+     *
      * @param s
      * @return
      */
