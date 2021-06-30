@@ -30,6 +30,7 @@ package y2021.m06.d29;
  */
 public class IsSymmetric {
 
+    // TODO 广度优先搜索
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(3), new TreeNode(4)), new TreeNode(2, new TreeNode(4), new TreeNode(3)));
         boolean res = isSymmetric(root);
