@@ -52,14 +52,21 @@ public class MinDepth {
         System.out.println("最小深度[" + i + "]");
     }
 
+    /**
+     * @param root
+     * @return
+     */
     public static int minDepth(TreeNode root) {
+        // 当前节点 root 为空时，说明此处树的高度为 0，0 也是最小值
         if (root == null) {
             return 0;
         }
+        // 左孩子和有孩子都为空的情况，说明到达了叶子节点，直接返回1即可
         if (root.left == null && root.right == null) {
             return 1;
         }
         int minDepth = Integer.MAX_VALUE;
+        // 如果为其他情况，则说明当前节点有值，且需要分别计算其左右子树的最小深度，返回最小深度 +1，+1 表示当前节点存在有 1 个深度
         if (root.left != null) {
             minDepth = Math.min(minDepth(root.left), minDepth);
         }
