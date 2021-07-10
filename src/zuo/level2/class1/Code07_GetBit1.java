@@ -10,7 +10,7 @@ package zuo.level2.class1;
  *       ~N+1 = 1 ..... 1 0 0 1 0 1 1 0 0 0
  * N & (~N+1) = 1 ..... 0 0 0 0 0 0 1 0 0 0
  */
-public class Code07_ {
+public class Code07_GetBit1 {
 
     public static void main(String[] args) {
         int num  = 5;

@@ -11,6 +11,26 @@ import java.util.List;
  */
 public class TreeTraversal {
 
+    public static class TreeNode {
+
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
     public static void main(String[] args) {
         /**
          * 树节点如下
@@ -24,9 +44,7 @@ public class TreeTraversal {
          * root = [1,2,3,4,5,6,7,8,9]
          */
         TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3, null, null), null));
-        root = new TreeNode(1,
-                            new TreeNode(2, new TreeNode(4, new TreeNode(7), new TreeNode(8)), null),
-                            new TreeNode(3, new TreeNode(5, null, new TreeNode(9)), new TreeNode(6)));
+
         List<Integer> preRes = new ArrayList<>();
         preRes = PreorderTraversal(root, preRes);
         // 1 2 4 7 8 3 5 9 6
