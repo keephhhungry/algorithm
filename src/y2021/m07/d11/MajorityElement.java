@@ -32,8 +32,8 @@ public class MajorityElement {
     }
 
     /**
-     * 投票法
-     *
+     * 摩尔投票法
+     * <p>
      * 候选人(candNum)初始化为nums[0]，票数count初始化为1。
      * 当遇到与candNum相同的数，则票数count = count + 1，否则票数count = count - 1。
      * 当票数count为0时，更换候选人，并将票数count重置为1。
@@ -42,9 +42,10 @@ public class MajorityElement {
      * 且“多数元素”的个数> [ n/2 ]，其余元素的个数总和<= [ n/2 ]。
      * 因此“多数元素”的个数 - 其余元素的个数总和 的结果 肯定 >= 1。
      * 这就相当于每个“多数元素”和其他元素 两两相互抵消，抵消到最后肯定还剩余至少1个“多数元素”。
-     *
+     * <p>
      * 时间复杂度：O(n)
      * 空间复杂度：O(1)
+     *
      * @param nums
      * @return
      */
@@ -61,6 +62,7 @@ public class MajorityElement {
                 count--;
                 if (count == 0) {
                     candNum = nums[i];
+                    count = 1;
                 }
             }
         }
