@@ -63,8 +63,9 @@ public class MissingNumber {
      */
     public static int missingNumber(int[] nums) {
         int ans = nums.length;
-        for (int i = 0; i < ans; i++) {
-            ans = ans ^ i ^ nums[i];
+        for (int i = 0; i < nums.length; i++) {
+            ans = ans ^ i;
+            ans = ans ^ nums[i];
         }
         return ans;
     }
