@@ -45,7 +45,7 @@ public class Fib {
             return n;
         }
         int p = 0, q = 0, r = 1;
-        for (int i = 2; i <= n; ++i) {
+        for (int i = 2; i <= n; i++) {
             p = q;
             q = r;
             r = p + q;
