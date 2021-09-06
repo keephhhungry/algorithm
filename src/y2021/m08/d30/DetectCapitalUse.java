@@ -42,10 +42,14 @@ public class DetectCapitalUse {
     public static boolean detectCapitalUse(String word) {
         int n = word.length();
         int z = 0;
+        // 判断大写个数
         for (int i = 0; i < n; i++) {
             if (word.charAt(i) >= 65 && word.charAt(i) <= 90) z++;
         }
-        if (z == n || (word.charAt(0) >= 65 && word.charAt(0) <= 90 && z == 1) || z == 0) return true;
+        // 如果全部是大写，或者全部是小写，或者首字母大写其他小写， 返回true
+        if (z == n || (word.charAt(0) >= 65 && word.charAt(0) <= 90 && z == 1) || z == 0) {
+            return true;
+        }
         return false;
     }
 }
